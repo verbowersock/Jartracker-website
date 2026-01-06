@@ -78,7 +78,7 @@ export default function ContactPage() {
             </div>
             <h1 className="text-4xl text-text-main mb-4">Get in Touch</h1>
             <p className="text-xl text-text-light">
-              Have questions about JarTracker? We'd love to hear from you.
+              Have questions about JarTracker? We&apos;d love to hear from you.
             </p>
           </div>
 
@@ -86,7 +86,7 @@ export default function ContactPage() {
             {status === "success" && (
               <div className="bg-green-50 border border-green-200 rounded-lg p-4 mb-6">
                 <p className="text-green-800">
-                  Thanks for reaching out! We'll get back to you soon.
+                  Thanks for reaching out! We&apos;ll get back to you soon.
                 </p>
               </div>
             )}

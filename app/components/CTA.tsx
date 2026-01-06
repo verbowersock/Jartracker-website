@@ -144,7 +144,7 @@ export function CTA() {
 
             {status === "success" && (
               <p className="text-green-300 text-sm mb-4">
-                Thanks! We'll notify you when JarTracker for{" "}
+                Thanks! We&apos;ll notify you when JarTracker for{" "}
                 {platform?.toUpperCase()} is ready.
               </p>
             )}

@@ -59,7 +59,7 @@ export default function PrivacyPage() {
               <p className="text-gray-600">
                 Jar Tracker does not collect or transmit any user data. All data
                 generated or entered by the user within the app is stored
-                locally on the user's device.
+                locally on the user&apos;s device.
               </p>
             </section>
 
@@ -68,7 +68,7 @@ export default function PrivacyPage() {
                 2. Data Storage
               </h2>
               <p className="text-gray-600">
-                All user data is stored exclusively on the user's device. We do
+                All user data is stored exclusively on the user&apos;s device. We do
                 not maintain servers or external databases to store any
                 information.
               </p>
@@ -94,7 +94,7 @@ export default function PrivacyPage() {
                 Jar Tracker provides users with the option to back up their data
                 and save it to a cloud storage. If users choose to use this
                 feature, it is important to note that the backup will be stored
-                on the user's selected cloud storage provider. Users should
+                on the user&apos;s selected cloud storage provider. Users should
                 refer to the privacy policy of their chosen cloud storage
                 provider for information on how their data is handled and
                 secured.
@@ -107,8 +107,8 @@ export default function PrivacyPage() {
               </h2>
               <p className="text-gray-600">
                 If you installed Jar Tracker through Google Play, your use of
-                the app is also subject to Google's privacy policy. Please refer
-                to Google Play's privacy policy for information on how Google
+                the app is also subject to Google&apos;s privacy policy. Please refer
+                to Google Play&apos;s privacy policy for information on how Google
                 collects, uses, and protects your data.
               </p>
             </section>
