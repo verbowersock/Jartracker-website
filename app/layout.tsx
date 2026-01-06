@@ -21,6 +21,31 @@ export const metadata: Metadata = {
   authors: [{ name: "VBDesigns" }],
   creator: "VBDesigns",
   publisher: "VBDesigns",
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: "https://jartracker.app",
+    title: "JarTracker - Smart Jar Organization",
+    description:
+      "Transform your pantry organization with QR code tracking for home-canned goods. Never forget what's in your jars or when you made them.",
+    siteName: "JarTracker",
+    images: [
+      {
+        url: "/images/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "JarTracker - Smart Jar Organization with QR Codes",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "JarTracker - Smart Jar Organization",
+    description:
+      "Transform your pantry organization with QR code tracking for home-canned goods. Never forget what's in your jars or when you made them.",
+    images: ["/images/og-image.png"],
+    creator: "@vbdesigns",
+  },
   robots: {
     index: true,
     follow: true,

@@ -68,8 +68,8 @@ export default function PrivacyPage() {
                 2. Data Storage
               </h2>
               <p className="text-gray-600">
-                All user data is stored exclusively on the user&apos;s device. We do
-                not maintain servers or external databases to store any
+                All user data is stored exclusively on the user&apos;s device.
+                We do not maintain servers or external databases to store any
                 information.
               </p>
             </section>
@@ -107,9 +107,9 @@ export default function PrivacyPage() {
               </h2>
               <p className="text-gray-600">
                 If you installed Jar Tracker through Google Play, your use of
-                the app is also subject to Google&apos;s privacy policy. Please refer
-                to Google Play&apos;s privacy policy for information on how Google
-                collects, uses, and protects your data.
+                the app is also subject to Google&apos;s privacy policy. Please
+                refer to Google Play&apos;s privacy policy for information on
+                how Google collects, uses, and protects your data.
               </p>
             </section>
 
