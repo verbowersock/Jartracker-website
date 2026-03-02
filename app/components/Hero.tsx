@@ -1,7 +1,10 @@
 "use client";
 
-import { QrcodeOutlined } from "@ant-design/icons";
-import { AppleOutlined, AndroidOutlined } from "@ant-design/icons";
+import {
+  QrcodeOutlined,
+  AppleOutlined,
+  AndroidOutlined,
+} from "@ant-design/icons";
 import { ClientSafeIcon } from "./ClientSafeIcon";
 import Image from "next/image";
 import { useState, useEffect } from "react";
@@ -42,28 +45,46 @@ export function Hero() {
             </p>
 
             <div className="flex flex-wrap gap-4">
+              <a
+                href="https://play.google.com/store/apps/details?id=com.veronikab.jartracker&hl=en_US"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 bg-jar-orange hover:bg-jar-orange text-white px-8 py-4 rounded-lg transition-colors"
+              >
+                <ClientSafeIcon
+                  icon={AndroidOutlined}
+                  style={{ fontSize: "20px" }}
+                />
+                Download
+              </a>
               <button
                 onClick={() => scrollToSection("cta")}
-                className="bg-jar-orange hover:bg-jar-orange text-white px-8 py-4 rounded-lg transition-colors"
+                className="flex items-center gap-2 bg-jar-green hover:bg-jar-green-dark text-text-on-green px-8 py-4 rounded-lg transition-colors"
               >
+                <ClientSafeIcon
+                  icon={AppleOutlined}
+                  style={{ fontSize: "20px" }}
+                />
                 Join the waitlist
               </button>
-              {/* <button className="border-2 border-gray-300 hover:border-jar-green text-gray-700 px-8 py-4 rounded-lg transition-colors">
-                Watch Demo
-              </button> */}
             </div>
 
             {/* Platform indicators */}
             <div className="flex items-center gap-6 pt-4">
-              <div className="text-gray-600">Coming soon for:</div>
-              <div className="flex items-center gap-4">
+              <div className="flex items-center gap-6">
                 <div className="flex items-center gap-2 text-gray-600">
-                  <ClientSafeIcon icon={AppleOutlined} style={{ fontSize: '20px' }} />
-                  <span>iOS</span>
+                  <ClientSafeIcon
+                    icon={AppleOutlined}
+                    style={{ fontSize: "20px" }}
+                  />
+                  <span>iOS - Coming soon</span>
                 </div>
-                <div className="flex items-center gap-2 text-gray-600">
-                  <ClientSafeIcon icon={AndroidOutlined} style={{ fontSize: '20px' }} />
-                  <span>Android</span>
+                <div className="flex items-center gap-2 text-jar-green font-semibold">
+                  <ClientSafeIcon
+                    icon={AndroidOutlined}
+                    style={{ fontSize: "20px" }}
+                  />
+                  <span>Android - Available Now</span>
                 </div>
               </div>
             </div>

@@ -8,7 +8,7 @@ import { useState } from "react";
 
 export function CTA() {
   const [email, setEmail] = useState("");
-  const [platform, setPlatform] = useState<"android" | "ios" | null>(null);
+  const [platform, setPlatform] = useState<"android" | "ios" | null>("ios");
   const [status, setStatus] = useState<
     "idle" | "loading" | "success" | "error"
   >("idle");
@@ -107,45 +107,62 @@ export function CTA() {
               </div>
             </div>
 
-            <form onSubmit={handleSubmit} className="space-y-4 mb-8">
-              <div className="flex flex-col sm:flex-row gap-4">
-                <input
-                  type="email"
-                  placeholder="Enter your email"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  required
-                  disabled={status === "loading"}
-                  className="px-6 py-4 rounded-lg text-gray-900 flex-1 disabled:opacity-50"
-                />
-                <button
-                  type="submit"
-                  disabled={
-                    status === "loading" || status === "success" || !platform
-                  }
-                  className="bg-jar-orange text-white px-8 py-4 rounded-lg hover:bg-jar-orange transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+            {platform === "android" ? (
+              <div className="space-y-4 mb-8">
+                <p className="text-white text-lg font-semibold">
+                  Great choice! Download Jar Tracker now:
+                </p>
+                <a
+                  href="https://play.google.com/store/apps/details?id=com.veronikab.jartracker&hl=en_US"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-3 bg-jar-orange text-white px-8 py-4 rounded-lg hover:bg-jar-orange transition-colors"
                 >
-                  {status === "loading"
-                    ? "Joining..."
-                    : status === "success"
-                    ? "✓ Joined!"
-                    : `Join ${platform ? platform.toUpperCase() : ""} waitlist`}
-                </button>
+                  <ClientSafeIcon
+                    icon={AndroidOutlined}
+                    style={{ fontSize: "24px" }}
+                  />
+                  Download on Google Play
+                </a>
               </div>
-            </form>
+            ) : (
+              <form onSubmit={handleSubmit} className="space-y-4 mb-8">
+                <div className="flex flex-col sm:flex-row gap-4">
+                  <input
+                    type="email"
+                    placeholder="Enter your email"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    required
+                    disabled={status === "loading"}
+                    className="px-6 py-4 rounded-lg text-gray-900 flex-1 disabled:opacity-50"
+                  />
+                  <button
+                    type="submit"
+                    disabled={
+                      status === "loading" || status === "success" || !platform
+                    }
+                    className="bg-jar-orange text-white px-8 py-4 rounded-lg hover:bg-jar-orange transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+                  >
+                    {status === "loading"
+                      ? "Joining..."
+                      : status === "success"
+                        ? "✓ Joined!"
+                        : "Join iOS waitlist"}
+                  </button>
+                </div>
+              </form>
+            )}
 
-            {status === "error" && (
+            {status === "error" && platform === "ios" && (
               <p className="text-red-300 text-sm mb-4">
-                {!platform
-                  ? "Please select a platform first."
-                  : "Something went wrong. Please try again."}
+                Something went wrong. Please try again.
               </p>
             )}
 
-            {status === "success" && (
+            {status === "success" && platform === "ios" && (
               <p className="text-green-300 text-sm mb-4">
-                Thanks! We&apos;ll notify you when JarTracker for{" "}
-                {platform?.toUpperCase()} is ready.
+                Thanks! We&apos;ll notify you when JarTracker for iOS is ready.
               </p>
             )}
 
